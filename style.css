@@ -382,3 +382,56 @@ body {
     padding: 0.75rem;
   }
 }
+/* =============================
+   REDES SOCIAIS – HEADER
+   ============================= */
+
+.social-header {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-left: 1.5rem;
+}
+
+.social-header a {
+  color: #334155;
+  font-size: 1.05rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.social-header a:hover {
+  color: #0f4c81;
+  transform: translateY(-2px);
+}
+
+/* =============================
+   REDES SOCIAIS – FOOTER
+   ============================= */
+
+.social-footer {
+  margin-top: 1.2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.4rem;
+}
+
+.social-footer a {
+  color: #94a3b8;
+  font-size: 1.3rem;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.social-footer a:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* =============================
+   MOBILE
+   ============================= */
+
+@media (max-width: 768px) {
+  .social-header {
+    display: none;
+  }
+}
