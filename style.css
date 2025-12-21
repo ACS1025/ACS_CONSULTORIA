@@ -462,10 +462,11 @@ body {
 }
 
 @media (max-width: 768px) {
-  .lang-switch {
-    display: none; /* depois podemos mover pro menu mobile */
+  header .lang-switch {
+    display: none !important;/* depois podemos mover pro menu mobile */
   }
 }
+
 
 
 .lang-switch {
