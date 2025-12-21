@@ -1,8 +1,8 @@
-/* =============================
+/* =================================================
    ACS CONSULT – IDENTIDADE VISUAL
    Estilo: Híbrido (dark hero + corpo claro)
    Sensação: Intelectual / Analítico
-   ============================= */
+   ================================================= */
 
 /* =============================
    VARIÁVEIS
@@ -25,7 +25,7 @@
 }
 
 /* =============================
-   RESET
+   RESET / BASE
    ============================= */
 
 * {
@@ -34,12 +34,8 @@
   box-sizing: border-box;
 }
 
-/* =============================
-   BASE
-   ============================= */
-
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   background: var(--light-bg);
   color: var(--text-dark);
   line-height: 1.65;
@@ -69,8 +65,8 @@ body {
 
 .header-inner {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   height: 72px;
   position: relative;
 }
@@ -121,6 +117,62 @@ body {
 }
 
 /* =============================
+   REDES SOCIAIS – HEADER
+   ============================= */
+
+.social-header {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-left: 1.5rem;
+}
+
+.social-header a {
+  color: #334155;
+  font-size: 1.05rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.social-header a:hover {
+  color: #0f4c81;
+  transform: translateY(-2px);
+}
+
+/* =============================
+   LANGUAGE SWITCH (FLAGS)
+   ============================= */
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-left: 1.5rem;
+}
+
+.lang-switch a {
+  display: inline-flex;
+  padding: 3px;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.lang-switch img {
+  width: 22px;
+  display: block;
+  border-radius: 4px;
+}
+
+.lang-switch a:hover {
+  transform: translateY(-2px);
+}
+
+.lang-switch a.active,
+.lang-switch a.active-lang {
+  border-color: var(--accent);
+}
+
+/* =============================
    HAMBURGER
    ============================= */
 
@@ -157,16 +209,12 @@ body {
    ============================= */
 
 .hero {
-  background: linear-gradient(135deg, var(--dark-bg), var(--dark-bg-soft));
-  color: var(--text-light);
-  padding: 7rem 0 6rem;
-}
-.hero {
   position: relative;
   background-image: url("src/ACS0.0.svg");
   background-size: cover;
   background-position: center;
   color: var(--text-light);
+  padding: 7rem 0 6rem;
 }
 
 .hero-overlay {
@@ -185,7 +233,6 @@ body {
   z-index: 2;
 }
 
-
 .hero-content {
   max-width: 820px;
 }
@@ -203,7 +250,6 @@ body {
   margin-bottom: 2.4rem;
 }
 
-
 /* =============================
    BOTÃO PRINCIPAL
    ============================= */
@@ -211,7 +257,7 @@ body {
 .btn-primary {
   display: inline-block;
   background-color: #0f4c81;
-  color: #fff;
+  color: #ffffff;
   padding: 14px 28px;
   border-radius: 6px;
   font-weight: 600;
@@ -247,14 +293,16 @@ body {
 }
 
 /* =============================
-   MÉTODO
+   MÉTODO / ATUAÇÃO
    ============================= */
 
-.metodo {
+.metodo,
+.experiencia {
   background: var(--white);
 }
 
-.metodo-lista {
+.metodo-lista,
+.atuacao-lista {
   list-style: none;
   margin-top: 2.5rem;
 }
@@ -266,7 +314,8 @@ body {
   transition: transform 0.2s ease, color 0.2s ease;
 }
 
-.metodo-lista li:hover {
+.metodo-lista li:hover,
+.atuacao-lista li:hover {
   transform: translateX(6px);
   color: #0f4c81;
 }
@@ -274,12 +323,7 @@ body {
 .metodo-lista strong {
   display: block;
   margin-bottom: 0.3rem;
-  color: var(--text-dark);
 }
-
-/* =============================
-   ATUAÇÃO
-   ============================= */
 
 .atuacao {
   background: var(--light-bg);
@@ -289,8 +333,6 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.5rem;
-  list-style: none;
-  margin-top: 2.2rem;
 }
 
 .atuacao-lista li {
@@ -299,20 +341,6 @@ body {
   border-radius: 10px;
   border: 1px solid var(--border-light);
   font-weight: 500;
-  transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.atuacao-lista li:hover {
-  transform: translateX(6px);
-  color: #0f4c81;
-}
-
-/* =============================
-   EXPERIÊNCIA
-   ============================= */
-
-.experiencia {
-  background: var(--white);
 }
 
 /* =============================
@@ -384,11 +412,9 @@ body {
    ============================= */
 
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.1rem;
-  }
-
-  .nav {
+  .nav,
+  .social-header,
+  .lang-switch {
     display: none;
   }
 
@@ -399,6 +425,10 @@ body {
     top: 1.2rem;
   }
 
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+
   .whatsapp-text {
     display: none;
   }
@@ -406,88 +436,4 @@ body {
   .whatsapp-float {
     padding: 0.75rem;
   }
-}
-/* =============================
-   REDES SOCIAIS – HEADER
-   ============================= */
-
-.social-header {
-  display: flex;
-  align-items: center;
-  gap: 0.9rem;
-  margin-left: 1.5rem;
-}
-
-.social-header a {
-  color: #334155;
-  font-size: 1.05rem;
-  transition: color 0.2s ease, transform 0.2s ease;
-}
-
-.social-header a:hover {
-  color: #0f4c81;
-  transform: translateY(-2px);
-}
-
-/* =============================
-   REDES SOCIAIS – FOOTER
-   ============================= */
-
-.social-footer {
-  margin-top: 1.2rem;
-  display: flex;
-  justify-content: center;
-  gap: 1.4rem;
-}
-
-.social-footer a {
-  color: #94a3b8;
-  font-size: 1.3rem;
-  transition: color 0.25s ease, transform 0.25s ease;
-}
-
-.social-footer a:hover {
-  color: #ffffff;
-  transform: translateY(-2px);
-}
-
-/* =============================
-   MOBILE
-   ============================= */
-
-@media (max-width: 768px) {
-  .social-header {
-    display: none;
-  }
-}
-
-@media (max-width: 768px) {
-  header .lang-switch {
-    display: none !important;/* depois podemos mover pro menu mobile */
-  }
-}
-
-
-
-.lang-switch {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.85rem;
-  margin-left: 1.5rem;
-}
-
-.lang-switch a {
-  text-decoration: none;
-  color: var(--text-muted);
-  font-weight: 500;
-}
-
-.lang-switch a:hover {
-  color: var(--accent);
-}
-
-.lang-switch .active {
-  color: var(--text-dark);
-  font-weight: 600;
 }
