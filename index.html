@@ -3,17 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- FAVICON -->
   <link rel="icon" type="image/x-icon" href="src/icon/favicon.ico">
 
   <title>ACS Consult | Inteligência de Dados para Decisões Críticas</title>
   <meta name="description" content="ACS Consult é uma consultoria em inteligência de dados aplicada à decisão operacional e estratégica, com foco em ambientes complexos, logística e gestão de riscos.">
 
-  <!-- Open Graph -->
+  <!-- OPEN GRAPH -->
   <meta property="og:title" content="ACS Consult | Inteligência de Dados para Decisões Críticas">
   <meta property="og:description" content="Decisões estratégicas orientadas por dados confiáveis, no tempo certo.">
   <meta property="og:type" content="website">
 
-  <!-- Fontes -->
+  <!-- FONTES -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -24,9 +26,12 @@
 
 <body>
 
+<!-- HEADER -->
 <header class="header">
   <div class="container header-inner">
     <div class="brand">ACS Consult</div>
+
+    <!-- NAV DESKTOP -->
     <nav class="nav">
       <a href="#home">Home</a>
       <a href="#metodo">Método</a>
@@ -34,8 +39,27 @@
       <a href="#experiencia">Experiência</a>
       <a href="#contato" class="nav-cta">Contato</a>
     </nav>
+
+    <!-- BOTÃO MOBILE -->
+    <button
+      id="mobileMenuToggle"
+      class="hamburger"
+      aria-label="Abrir menu"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
   </div>
 </header>
+
+<!-- NAV MOBILE -->
+<nav id="mobileNav" class="mobile-nav" aria-hidden="true">
+  <a href="#home">Home</a>
+  <a href="#metodo">Método</a>
+  <a href="#atuacao">Atuação</a>
+  <a href="#experiencia">Experiência</a>
+  <a href="#contato">Contato</a>
+</nav>
 
 <main id="home">
 
@@ -81,12 +105,10 @@
           <strong>Diagnóstico</strong>
           Leitura cuidadosa do cenário, dos riscos envolvidos e dos objetivos reais do projeto.
         </li>
-
         <li>
           <strong>Método</strong>
           Uso de dados, critérios claros e análise crítica para organizar informações complexas.
         </li>
-
         <li>
           <strong>Decisão</strong>
           Apoio estratégico para escolhas responsáveis, considerando impacto, viabilidade e risco.
@@ -151,27 +173,21 @@
       <ul class="metodo-lista">
         <li>
           <strong>Clareza antes da solução</strong>
-          Não começo propondo ferramentas ou respostas prontas. O foco inicial
-          é compreender o contexto, os riscos envolvidos e o que realmente
-          precisa ser decidido.
+          Compreensão profunda do contexto antes de qualquer recomendação.
         </li>
-
         <li>
           <strong>Método aplicado à realidade</strong>
-          Uso dados, análise e critérios objetivos, sempre considerando o
-          ambiente real, as limitações operacionais e as pessoas envolvidas.
+          Análise orientada por dados, respeitando limitações e pessoas.
         </li>
-
         <li>
-          <strong>Apoio consciente, não terceirização</strong>
-          Meu papel não é decidir pelo cliente, e sim apoiar decisões
-          bem fundamentadas e alinhadas ao impacto esperado.
+          <strong>Apoio consciente</strong>
+          Apoio à decisão sem terceirizar responsabilidade.
         </li>
       </ul>
     </div>
   </section>
 
-  <!-- CTA FINAL -->
+  <!-- CONTATO -->
   <section class="section contato" id="contato">
     <div class="container contato-box">
       <h2>Vamos conversar sobre o seu contexto</h2>
@@ -194,6 +210,7 @@
 
 </main>
 
+<!-- FOOTER -->
 <footer class="footer">
   <div class="container footer-inner">
     <p>© 2025 ACS Consult | Ana Claudia Souza</p>
@@ -201,7 +218,7 @@
   </div>
 </footer>
 
-<!-- BOTÃO FLUTUANTE WHATSAPP -->
+<!-- WHATSAPP FLUTUANTE -->
 <a
   href="https://wa.me/5511996232846?text=Ol%C3%A1%2C%20vi%20o%20seu%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20poss%C3%ADvel%20projeto."
   class="whatsapp-float"
@@ -210,6 +227,9 @@
 >
   <span class="whatsapp-text">Vamos conversar?</span>
 </a>
+
+<!-- JS -->
+<script src="script.js"></script>
 
 </body>
 </html>

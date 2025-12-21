@@ -2,7 +2,10 @@
    ACS CONSULT – IDENTIDADE VISUAL
    Estilo: Híbrido (dark hero + corpo claro)
    Sensação: Intelectual / Analítico
-   Referência: Tecnologia aplicada à decisão
+   ============================= */
+
+/* =============================
+   VARIÁVEIS
    ============================= */
 
 :root {
@@ -21,11 +24,19 @@
   --border-light: #e5e7eb;
 }
 
+/* =============================
+   RESET
+   ============================= */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+/* =============================
+   BASE
+   ============================= */
 
 body {
   font-family: 'Inter', sans-serif;
@@ -61,6 +72,7 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 72px;
+  position: relative;
 }
 
 .brand {
@@ -69,16 +81,37 @@ body {
   letter-spacing: 0.02em;
 }
 
+/* =============================
+   NAV DESKTOP
+   ============================= */
+
 .nav a {
   margin-left: 1.8rem;
   text-decoration: none;
   color: var(--text-dark);
   font-size: 0.95rem;
   font-weight: 500;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: #0f4c81;
+  transition: width 0.25s ease;
 }
 
 .nav a:hover {
-  color: var(--accent);
+  color: #0f4c81;
+}
+
+.nav a:hover::after {
+  width: 100%;
 }
 
 .nav-cta {
@@ -88,7 +121,39 @@ body {
 }
 
 /* =============================
-   HERO (DARK)
+   HAMBURGER
+   ============================= */
+
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-dark);
+}
+
+/* =============================
+   MENU MOBILE
+   ============================= */
+
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  background: var(--white);
+  padding: 1.5rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.mobile-nav a {
+  padding: 0.75rem 0;
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+/* =============================
+   HERO
    ============================= */
 
 .hero {
@@ -114,22 +179,29 @@ body {
   margin-bottom: 2.4rem;
 }
 
+/* =============================
+   BOTÃO PRINCIPAL
+   ============================= */
+
 .btn-primary {
   display: inline-block;
-  background: var(--accent);
-  color: var(--white);
-  padding: 0.75rem 1.6rem;
-  border-radius: 8px;
+  background-color: #0f4c81;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 6px;
   font-weight: 600;
   text-decoration: none;
+  transition: background-color 0.25s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .btn-primary:hover {
-  background: var(--accent-soft);
+  background-color: #0c3d68;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(15, 76, 129, 0.25);
 }
 
 /* =============================
-   SECTIONS (CLARO)
+   SECTIONS
    ============================= */
 
 .section {
@@ -166,6 +238,12 @@ body {
   padding-left: 1.2rem;
   border-left: 3px solid var(--accent);
   margin-bottom: 1.8rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.metodo-lista li:hover {
+  transform: translateX(6px);
+  color: #0f4c81;
 }
 
 .metodo-lista strong {
@@ -196,6 +274,12 @@ body {
   border-radius: 10px;
   border: 1px solid var(--border-light);
   font-weight: 500;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.atuacao-lista li:hover {
+  transform: translateX(6px);
+  color: #0f4c81;
 }
 
 /* =============================
@@ -239,20 +323,7 @@ body {
 }
 
 /* =============================
-   RESPONSIVO
-   ============================= */
-
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.1rem;
-  }
-
-  .nav a {
-    margin-left: 1rem;
-  }
-}
-/* =============================
-   BOTÃO FLUTUANTE WHATSAPP
+   WHATSAPP FLOAT
    ============================= */
 
 .whatsapp-float {
@@ -276,14 +347,33 @@ body {
 
 .whatsapp-float:hover {
   transform: translateY(-3px);
-  box-shadow: 0 14px 30px rgba(0,0,0,0.25);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
 }
 
 .whatsapp-text {
   white-space: nowrap;
 }
 
+/* =============================
+   RESPONSIVO
+   ============================= */
+
 @media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.2rem;
+  }
+
   .whatsapp-text {
     display: none;
   }
@@ -291,68 +381,4 @@ body {
   .whatsapp-float {
     padding: 0.75rem;
   }
-}
-/* =============================
-   HOOVER
-   ============================= */
-
-
-.nav a {
-  position: relative;
-  color: #2b2b2b;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.nav a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0;
-  height: 2px;
-  background-color: #0f4c81;
-  transition: width 0.25s ease;
-}
-
-.nav a:hover {
-  color: #0f4c81;
-}
-
-.nav a:hover::after {
-  width: 100%;
-}
-.btn-primary {
-  background-color: #0f4c81;
-  color: #fff;
-  padding: 14px 28px;
-  border-radius: 6px;
-  transition: 
-    background-color 0.25s ease,
-    transform 0.15s ease,
-    box-shadow 0.15s ease;
-}
-
-.btn-primary:hover {
-  background-color: #0c3d68;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(15, 76, 129, 0.25);
-}
-.metodo-lista li,
-.atuacao-lista li {
-  transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.metodo-lista li:hover,
-.atuacao-lista li:hover {
-  transform: translateX(6px);
-  color: #0f4c81;
-}
-.whatsapp-float {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.whatsapp-float:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
