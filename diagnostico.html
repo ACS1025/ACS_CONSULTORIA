@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Diagnóstico Estratégico | ACS Consult</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f5f7fa;
+  color: #222;
+}
+
+/* HEADER */
+.header {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.menu {
+  display: flex;
+  gap: 25px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #222;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  opacity: 0.6;
+}
+
+.btn-contato {
+  padding: 8px 18px;
+  border: 1px solid #000;
+  border-radius: 6px;
+}
+
+.lang-switch {
+  display: flex;
+  gap: 10px;
+}
+
+.lang-switch img {
+  width: 22px;
+  height: auto;
+}
+
+.social-header {
+  display: flex;
+  gap: 15px;
+}
+
+.social-header a {
+  color: #222;
+  font-size: 16px;
+}
+
+.hamburger {
+  display: none;
+  font-size: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  padding: 20px;
+  background: #fff;
+  border-top: 1px solid #eee;
+}
+
+.mobile-nav a {
+  padding: 10px 0;
+  text-decoration: none;
+  color: #222;
+}
+
+.mobile-nav.active {
+  display: flex;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.section {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 50px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+h2 {
+  font-weight: 600;
+}
+
+p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.form-acs {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  transition: 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #000;
+  outline: none;
+}
+
+textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.full {
+  grid-column: span 3;
+}
+
+.form-submit {
+  grid-column: span 3;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.btn-primary {
+  padding: 14px 32px;
+  border: none;
+  background: #000;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #222;
+  transform: translateY(-2px);
+}
+
+.footer {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 13px;
+  color: #777;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .form-acs { grid-template-columns: repeat(2, 1fr); }
+  .full, .form-submit { grid-column: span 2; }
+}
+
+@media (max-width: 900px) {
+  .menu, .lang-switch, .social-header {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
+@media (max-width: 640px) {
+  .form-acs { grid-template-columns: 1fr; }
+  .full, .form-submit { grid-column: span 1; }
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <div class="brand">ACS Consult</div>
+
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="index.html#metodo">Método</a>
+      <a href="index.html#atuacao">Atuação</a>
+      <a href="index.html#experiencia">Experiência</a>
+      <a href="diagnostico.html">Diagnóstico</a>
+      <a href="index.html#contato" class="btn-contato">Contato</a>
+    </nav>
+
+    <div class="lang-switch">
+      <a href="index.html"><img src="src/icon/br.svg" alt="Português"></a>
+      <a href="en/index.html"><img src="src/icon/usa.svg" alt="English"></a>
+      <a href="es/index.html"><img src="src/icon/es.svg" alt="Español"></a>
+    </div>
+
+    <div class="social-header">
+      <a href="https://www.linkedin.com/in/acs-ana-claudia" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://www.instagram.com/acs_consult/" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <button id="mobileMenuToggle" class="hamburger">☰</button>
+  </div>
+</header>
+
+<nav id="mobileNav" class="mobile-nav">
+  <a href="index.html">Home</a>
+  <a href="index.html#metodo">Método</a>
+  <a href="index.html#atuacao">Atuação</a>
+  <a href="index.html#experiencia">Experiência</a>
+  <a href="diagnostico.html">Diagnóstico</a>
+  <a href="index.html#contato">Contato</a>
+</nav>
+
+<div class="container">
+<section class="section">
+
+<h2>Diagnóstico Estratégico Institucional</h2>
+<p>Preencha com o máximo de clareza possível. Quanto mais detalhado, mais estratégico será o posicionamento desenvolvido.</p>
+
+<form id="formACS" class="form-acs">
+
+<div class="form-group">
+<label>Data</label>
+<input type="date" name="data">
+</div>
+
+<div class="form-group">
+<label>Nome</label>
+<input type="text" name="nome" placeholder="Ex: Dra. Ana Claudia Souza" required>
+</div>
+
+<div class="form-group">
+<label>Área</label>
+<input type="text" name="area" placeholder="Ex: Direito Previdenciário">
+</div>
+
+<div class="form-group">
+<label>Cidade</label>
+<input type="text" name="cidade" placeholder="Ex: Belo Horizonte - MG">
+</div>
+
+<div class="form-group full">
+<label>Percepção</label>
+<textarea name="percepcao" placeholder="Como você deseja ser percebido? Ex: Autoridade técnica acessível e estratégica."></textarea>
+</div>
+
+<div class="form-group">
+<label>Essência</label>
+<input type="text" name="essencia" placeholder="Ex: Estratégia, precisão e ética">
+</div>
+
+<div class="form-group full">
+<label>Título Principal</label>
+<textarea name="titulo_principal" placeholder="Ex: Especialista em Direito Previdenciário com foco em planejamento estratégico."></textarea>
+</div>
+
+<div class="form-group full">
+<label>Impacto Resumo</label>
+<textarea name="impacto_resumo" placeholder="Resumo do impacto que você gera no cliente."></textarea>
+</div>
+
+<div class="form-group">
+<label>CTA</label>
+<input type="text" name="cta" placeholder="Ex: Agende uma consulta estratégica">
+</div>
+
+<div class="form-group full">
+<label>Problema</label>
+<textarea name="problema" placeholder="Qual principal problema você resolve?"></textarea>
+</div>
+
+<div class="form-group">
+<label>Público</label>
+<input type="text" name="publico" placeholder="Ex: Empresários e profissionais liberais">
+</div>
+
+<div class="form-group">
+<label>Pilares</label>
+<input type="text" name="pilares" placeholder="Ex: Planejamento, Segurança Jurídica, Eficiência">
+</div>
+
+<div class="form-group full">
+<label>Transformação</label>
+<textarea name="transformacao" placeholder="Qual transformação você gera após seu serviço?"></textarea>
+</div>
+
+<div class="form-group full">
+<label>Método</label>
+<textarea name="metodo" placeholder="Descreva seu método ou processo de trabalho."></textarea>
+</div>
+
+<div class="form-group">
+<label>Valores</label>
+<input type="text" name="valores" placeholder="Ex: Ética, Clareza, Estratégia">
+</div>
+
+<div class="form-group">
+<label>Áreas Atuação</label>
+<input type="text" name="areas_atuacao" placeholder="Liste suas áreas complementares">
+</div>
+
+<div class="form-group full">
+<label>Experiência</label>
+<textarea name="experiencia" placeholder="Resumo da sua trajetória profissional."></textarea>
+</div>
+
+<div class="form-group full">
+<label>Projetos</label>
+<textarea name="projetos" placeholder="Projetos ou casos relevantes."></textarea>
+</div>
+
+<div class="form-group full">
+<label>Impacto Gerado</label>
+<textarea name="impacto_gerado" placeholder="Resultados concretos já alcançados."></textarea>
+</div>
+
+<div class="form-group">
+<label>LinkedIn</label>
+<input type="url" name="linkedin" placeholder="https://linkedin.com/in/...">
+</div>
+
+<div class="form-group">
+<label>Instagram</label>
+<input type="url" name="instagram" placeholder="https://instagram.com/...">
+</div>
+
+<div class="form-group">
+<label>Lattes</label>
+<input type="url" name="lattes" placeholder="http://lattes.cnpq.br/...">
+</div>
+
+<div class="form-group full">
+<label>Palavras-chave</label>
+<textarea name="palavras_chave" placeholder="Termos que deseja ranquear no Google."></textarea>
+</div>
+
+<div class="form-group full">
+<label>Busca Google</label>
+<textarea name="busca_google" placeholder="Como você acredita que as pessoas pesquisam por você?"></textarea>
+</div>
+
+<div class="form-group">
+<label>Região SEO</label>
+<input type="text" name="regiao_seo" placeholder="Ex: Belo Horizonte e região metropolitana">
+</div>
+
+<div class="form-group">
+<label>WhatsApp</label>
+<input type="text" name="whatsapp" placeholder="(31) 9 9999-9999">
+</div>
+
+<div class="form-group">
+<label>Email</label>
+<input type="email" name="email" placeholder="email@exemplo.com" required>
+</div>
+
+<div class="form-group full">
+<label>Mensagem WhatsApp</label>
+<textarea name="mensagem_whatsapp" placeholder="Mensagem automática que o cliente enviará ao clicar no botão."></textarea>
+</div>
+
+<div class="form-submit">
+<button type="submit" class="btn-primary">Enviar Diagnóstico</button>
+</div>
+
+</form>
+</section>
+</div>
+
+<footer class="footer">
+© 2025 ACS Consult | Ana Claudia Souza
+</footer>
+
+<script>
+document.getElementById("formACS").addEventListener("submit", function(e){
+e.preventDefault();
+const formData = new FormData(this);
+
+fetch("https://script.google.com/macros/s/AKfycbyQaxSJqVGQ1E4W9DiEarsBqWGhK_wLlx9Dd5S3bAUH3dx4XGIqg5q4SAVvNFWw8c3o-g/exec", {
+method: "POST",
+body: JSON.stringify(Object.fromEntries(formData)),
+headers: { "Content-Type": "application/json" }
+})
+.then(response => response.text())
+.then(data => {
+alert("Diagnóstico enviado com sucesso!");
+this.reset();
+})
+.catch(error => {
+alert("Erro ao enviar. Tente novamente.");
+});
+});
+</script>
+
+</body>
+</html>
