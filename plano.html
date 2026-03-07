@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planos de Criação de Sites - Tech Infográfico</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('https://images.unsplash.com/photo-1568952433726-3896e3881c65?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 40px 0;
+      font-size: 2.5em;
+      text-shadow: 2px 2px 8px #000;
+    }
+
+    .planos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 0 20px 50px 20px;
+    }
+
+    .plano {
+      background-color: rgba(0,0,0,0.85);
+      border-radius: 15px;
+      padding: 25px;
+      flex: 1 1 280px;
+      max-width: 330px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .plano:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.7);
+    }
+
+    .plano h2 {
+      margin: 0 0 15px 0;
+      padding: 12px 25px;
+      border-radius: 10px;
+      color: #fff;
+      text-align: center;
+      width: 100%;
+      font-size: 1.5em;
+    }
+
+    .basico h2 { background-color: #4a90e2; }
+    .premium h2 { background-color: #27ae60; }
+    .master h2 { background-color: #8e44ad; }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px 0;
+      width: 100%;
+    }
+
+    ul li {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.95em;
+    }
+
+    ul li i {
+      color: #f39c12;
+      min-width: 20px;
+      text-align: center;
+    }
+
+    .preco {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-bottom: 15px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .btn {
+      background-color: #25D366;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .btn:hover {
+      background-color: #128C7E;
+      transform: scale(1.05);
+    }
+
+    @media(max-width: 950px){
+      .planos {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Planos de Criação de Sites</h1>
+
+  <div class="planos">
+
+    <div class="plano basico">
+      <h2>Básico</h2>
+      <ul>
+        <li><i class="fas fa-file-lines"></i> Até 3 páginas</li>
+        <li><i class="fas fa-mobile-alt"></i> Layout responsivo</li>
+        <li><i class="fas fa-server"></i> Hospedagem: GitHub Pages / Netlify / Cloudflare Pages</li>
+        <li><i class="fas fa-link"></i> URL personalizada</li>
+        <li><i class="fab fa-whatsapp"></i> Integração WhatsApp</li>
+        <li><i class="fas fa-headset"></i> Suporte pós-entrega: 30 dias</li>
+      </ul>
+      <div class="preco">R$ 1.200 – R$ 1.800</div>
+      <a href="https://wa.me/5511996232846?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20plano%20Básico" target="_blank" class="btn">Falar no WhatsApp</a>
+    </div>
+
+    <div class="plano premium">
+      <h2>Premium</h2>
+      <ul>
+        <li><i class="fas fa-file-lines"></i> Até 5 páginas</li>
+        <li><i class="fas fa-mobile-alt"></i> Layout responsivo</li>
+        <li><i class="fas fa-server"></i> Hospedagem: WordPress / Wix / Squarespace / GitHub / Netlify</li>
+        <li><i class="fas fa-link"></i> URL personalizada</li>
+        <li><i class="fas fa-envelope"></i> Formulário de contato</li>
+        <li><i class="fab fa-whatsapp"></i> Integração WhatsApp</li>
+        <li><i class="fas fa-search"></i> SEO básico</li>
+        <li><i class="fas fa-pencil-alt"></i> Atualização de conteúdo: 60 dias incluídos</li>
+        <li><i class="fas fa-headset"></i> Suporte pós-entrega: 60 dias</li>
+      </ul>
+      <div class="preco">R$ 2.500 – R$ 3.500</div>
+      <a href="https://wa.me/5511996232846?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20plano%20Premium" target="_blank" class="btn">Falar no WhatsApp</a>
+    </div>
+
+    <div class="plano master">
+      <h2>Master</h2>
+      <ul>
+        <li><i class="fas fa-file-lines"></i> Até 10 páginas</li>
+        <li><i class="fas fa-mobile-alt"></i> Layout responsivo</li>
+        <li><i class="fas fa-server"></i> Hospedagem flexível (GitHub, Netlify, WordPress, Hostinger, HostGator)</li>
+        <li><i class="fas fa-link"></i> URL personalizada</li>
+        <li><i class="fas fa-envelope"></i> Formulário de contato</li>
+        <li><i class="fab fa-whatsapp"></i> Integração WhatsApp</li>
+        <li><i class="fas fa-search"></i> SEO avançado / Google Analytics / Pixel</li>
+        <li><i class="fas fa-pencil-alt"></i> Atualização de conteúdo: 6 meses incluídos</li>
+        <li><i class="fas fa-chart-line"></i> Relatórios de desempenho</li>
+        <li><i class="fas fa-headset"></i> Suporte pós-entrega: 6 meses</li>
+      </ul>
+      <div class="preco">R$ 5.000 – R$ 8.000</div>
+      <a href="https://wa.me/5511996232846?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20plano%20Master" target="_blank" class="btn">Falar no WhatsApp</a>
+    </div>
+
+  </div>
+
+</body>
+</html>
