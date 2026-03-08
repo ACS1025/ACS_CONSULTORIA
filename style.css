@@ -437,3 +437,22 @@ body {
     padding: 0.75rem;
   }
 }
+
+/* Botão secundário para planos */
+.btn-secondary {
+  display: inline-block;
+  background-color: #2980b9;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s;
+  margin-top: 15px;
+}
+
+.btn-secondary:hover {
+  background-color: #1c5980;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
