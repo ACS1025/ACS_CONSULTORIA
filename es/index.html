@@ -3,155 +3,214 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
 
-  <!-- Icons -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  />
-
-  <!-- Favicon -->
+  <!-- FAVICON -->
   <link rel="icon" type="image/x-icon" href="../src/icon/favicon.ico">
 
-  <title>ACS Consult | Inteligencia de Datos para Decisiones Críticas</title>
-  <meta name="description"
-    content="ACS Consult ofrece consultoría en inteligencia de datos para la toma de decisiones estratégicas y operativas en entornos complejos.">
+  <title>ACS Consult | Inteligencia de Datos para la Toma de Decisiones Críticas</title>
+  <meta name="description" content="ACS Consult es una consultoría de inteligencia de datos enfocada en la toma de decisiones operativas y estratégicas, con experiencia en entornos complejos, logística y gestión de riesgos.">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="ACS Consult | Inteligencia de Datos para Decisiones Críticas">
-  <meta property="og:description" content="Decisiones estratégicas basadas en datos confiables, en el momento adecuado.">
+  <!-- OPEN GRAPH -->
+  <meta property="og:title" content="ACS Consult | Inteligencia de Datos para la Toma de Decisiones Críticas">
+  <meta property="og:description" content="Decisiones estratégicas impulsadas por datos confiables, en el momento adecuado.">
   <meta property="og:type" content="website">
 
-  <!-- Fonts -->
+  <!-- FONTES -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- CSS -->
   <link rel="stylesheet" href="../style.css">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-13204126499"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-13204126499');
+</script>
+
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header class="header">
   <div class="container header-inner">
     <div class="brand">ACS Consult</div>
 
-    <!-- NAV DESKTOP -->
     <nav class="nav">
       <a href="#home">Inicio</a>
       <a href="#metodo">Método</a>
       <a href="#atuacao">Áreas</a>
       <a href="#experiencia">Experiencia</a>
+      <a href="../diagnostico.html">Diagnóstico</a>
       <a href="#contato" class="nav-cta">Contacto</a>
     </nav>
 
-    <!-- LANGUAGE SWITCH -->
-    <div class="lang-switch">
-      <a href="../index.html" aria-label="Portuguese">
-        <img src="../src/icon/br.svg" alt="Português">
+    <div class="lang-switch flags">
+      <a href="../index.html" aria-label="Portugués">
+        <img src="../src/icon/br.svg" alt="Portugués">
       </a>
-
       <a href="../en/index.html" aria-label="Inglés">
-        <img src="../src/icon/usa.svg" alt="English">
+        <img src="../src/icon/usa.svg" alt="Inglés">
       </a>
-
-      <a href="../es/index.html" class="active-lang" aria-label="Español">
+      <a href="../es/index.html" aria-label="Español">
         <img src="../src/icon/es.svg" alt="Español">
       </a>
     </div>
 
-    <!-- HAMBURGER -->
-    <button
-      id="mobileMenuToggle"
-      class="hamburger"
-      aria-label="Abrir menú"
-      aria-expanded="false"
-    >
+    <div class="social-header">
+      <a href="https://www.linkedin.com/in/acs-ana-claudia" target="_blank" aria-label="LinkedIn ACS Consult">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+
+      <a href="https://www.instagram.com/acs_consult/" target="_blank" aria-label="Instagram ACS Consult">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+
+    <button id="mobileMenuToggle" class="hamburger" aria-label="Abrir menú" aria-expanded="false">
       ☰
     </button>
   </div>
 </header>
 
-<!-- NAV MOBILE -->
 <nav id="mobileNav" class="mobile-nav" aria-hidden="true">
   <a href="#home">Inicio</a>
   <a href="#metodo">Método</a>
   <a href="#atuacao">Áreas</a>
   <a href="#experiencia">Experiencia</a>
+  <a href="../diagnostico.html">Diagnóstico</a>
   <a href="#contato">Contacto</a>
 </nav>
 
 <main id="home">
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-overlay"></div>
-
   <div class="container">
     <div class="hero-content">
-      <h1>Los proyectos complejos exigen decisiones bien fundamentadas</h1>
+      <h1>Las decisiones críticas requieren más que datos.</h1>
 
       <p>
-        Asesoría estratégica basada en datos, método y experiencia
-        para convertir información en acción segura.
+        Apoyo a las empresas a transformar información en decisiones seguras,
+        estructurando análisis, identificando riesgos y aportando claridad
+        en entornos operativos complejos.
       </p>
 
       <a href="#contato" class="btn-primary">
-        Hablemos de un proyecto
+        Analizar su escenario
       </a>
     </div>
   </div>
 </section>
 
-<!-- APOYO -->
-<section class="section apoio">
+<section class="section projetos" id="projetos">
   <div class="container">
-    <p><strong>
-      Acompaño proyectos que requieren análisis cuidadoso,
-      responsabilidad y decisiones conscientes.
-    </strong></p>
+
+    <h2>Proyectos Destacados</h2>
+    <p>
+      Algunos ejemplos de cómo estructuro datos y análisis
+      para apoyar decisiones, reducir riesgos y mejorar
+      el rendimiento en operaciones reales.
+    </p>
+
+    <div class="projetos-grid">
+
+      <div class="projeto-card destaque">
+        <i class="fas fa-truck"></i>
+        <h3>Análisis de Riesgo y Rendimiento Operativo</h3>
+
+        <p>
+          Sistema de monitoreo logístico enfocado en el análisis del rendimiento de conductores,
+          identificación de riesgos operativos y variaciones en volumen e ingresos.
+        </p>
+
+        <ul>
+          <li>Ranking de conductores por volumen y comportamiento</li>
+          <li>Identificación de recurrencias y patrones de riesgo</li>
+          <li>Análisis de variación financiera y volumen operativo</li>
+          <li>Apoyo a la toma de decisiones estratégicas</li>
+        </ul>
+
+        <a href="../projetos/driver-risk.html">Ver proyecto</a>
+      </div>
+
+      <div class="projeto-card">
+        <i class="fas fa-chart-line"></i>
+        <h3>Dashboard Operativo</h3>
+        <p>
+          Monitoreo de indicadores estratégicos y operativos
+          para apoyar la toma de decisiones.
+        </p>
+        <ul>
+          <li>KPI en tiempo real</li>
+          <li>Análisis de rendimiento</li>
+          <li>Visualización interactiva</li>
+        </ul>
+        <a href="../projetos/dashboard-operacional.html">Ver proyecto</a>
+      </div>
+
+      <div class="projeto-card">
+        <i class="fas fa-database"></i>
+        <h3>Integración y Automatización de Datos</h3>
+
+        <p>
+          Conecto diferentes fuentes de datos en una estructura única,
+          automatizada y lista para análisis en tiempo real.
+        </p>
+
+        <ul>
+          <li>Actualización automática</li>
+          <li>Integración vía API/CSV</li>
+          <li>Base de datos única</li>
+        </ul>
+
+        <span class="tag">Automatización</span>
+
+        <a href="https://wa.me/5511996232846" target="_blank">
+          Solicitar solución
+        </a>
+      </div>
+
+    </div>
   </div>
 </section>
 
-<!-- METODO -->
 <section class="section metodo" id="metodo">
   <div class="container">
-    <h2>Cómo trabajo</h2>
-
+    <h2>Cómo Trabajo</h2>
     <p>
       Cada proyecto comienza con una comprensión profunda del contexto,
-      seguida de análisis estructurado y apoyo a la decisión.
+      seguida de un análisis estructurado y apoyo a la toma de decisiones.
     </p>
 
     <ul class="metodo-lista">
       <li>
         <strong>Diagnóstico</strong>
-        Análisis detallado del escenario, riesgos y objetivos reales.
+        Análisis cuidadoso del escenario, riesgos involucrados y objetivos reales del proyecto.
       </li>
-
       <li>
         <strong>Método</strong>
-        Uso de datos y pensamiento crítico para estructurar la información.
+        Uso de datos, criterios claros y análisis crítico para organizar información compleja.
       </li>
-
       <li>
         <strong>Decisión</strong>
-        Apoyo estratégico considerando impacto, viabilidad y riesgo.
+        Apoyo estratégico para decisiones responsables, considerando impacto, viabilidad y riesgo.
       </li>
     </ul>
   </div>
 </section>
 
-<!-- AREAS -->
 <section class="section atuacao" id="atuacao">
   <div class="container">
-    <h2>Áreas de actuación</h2>
-
+    <h2>Áreas de Actuación</h2>
     <p>
-      Asesoría en proyectos que involucran riesgo,
-      información y toma de decisiones estructurada.
+      Actuación en proyectos que involucran riesgo,
+      información y necesidad de toma de decisiones estructuradas.
     </p>
 
     <ul class="atuacao-lista">
@@ -159,75 +218,124 @@
       <li>Proyectos estratégicos y operativos</li>
       <li>Inteligencia basada en datos</li>
       <li>Apoyo a la toma de decisiones</li>
-      <li>Logística y cadenas complejas</li>
-      <li>Proyectos institucionales, culturales y sector público</li>
+      <li>Entornos logísticos y cadenas complejas</li>
+      <li>Proyectos institucionales, culturales y del sector público</li>
     </ul>
   </div>
 </section>
 
-<!-- EXPERIENCIA -->
 <section class="section experiencia" id="experiencia">
   <div class="container">
     <h2>Experiencia construida en la práctica</h2>
 
     <p>
-      Experiencia en entornos donde las decisiones deben tomarse
-      con información incompleta, plazos ajustados y alto impacto.
+      Trabajo en entornos donde las decisiones deben tomarse
+      con información incompleta, plazos cortos y alto impacto operativo.
     </p>
 
     <p>
-      Trayectoria en gestión de riesgos, operaciones,
-      análisis de datos y apoyo estratégico.
+      Mi trayectoria incluye proyectos relacionados con gestión de riesgos,
+      operaciones, datos y apoyo a decisiones, siempre con enfoque en claridad,
+      responsabilidad y consistencia analítica.
     </p>
 
     <p>
-      Más que herramientas, ayudo a las organizaciones a
-      <strong>pensar con claridad antes de decidir</strong>.
+      Más que aplicar herramientas, mi trabajo es ayudar a personas y organizaciones
+      a <strong>pensar mejor antes de decidir</strong>.
     </p>
   </div>
 </section>
 
-<!-- CONTACTO -->
-<section class="section contato" id="contato">
-  <div class="container contato-box">
-    <h2>Conversemos sobre su contexto</h2>
+<section class="section diferenciais">
+  <div class="container">
+    <h2>Por qué trabajar conmigo</h2>
 
     <p>
-      Si enfrenta decisiones críticas o proyectos complejos,
-      podemos analizarlos juntos.
+      Cada proyecto se desarrolla con enfoque en la comprensión real del problema,
+      claridad analítica y responsabilidad en las recomendaciones.
     </p>
 
-    <a
-      href="https://wa.me/5511996232846?text=Hola%2C%20vi%20su%20sitio%20web%20y%20me%20gustaría%20hablar%20sobre%20un%20posible%20proyecto."
-      class="btn-primary"
-      target="_blank"
-    >
-      Iniciar conversación
+    <p>
+      Más que entregar dashboards, estructuro el razonamiento
+      necesario para decisiones consistentes en contextos complejos.
+    </p>
+
+    <ul class="metodo-lista">
+      <li>
+        <strong>Claridad antes de la solución</strong>
+        Comprensión profunda del contexto antes de cualquier recomendación.
+      </li>
+      <li>
+        <strong>Método aplicado a la realidad</strong>
+        Análisis basado en datos respetando limitaciones y personas.
+      </li>
+      <li>
+        <strong>Apoyo consciente</strong>
+        Apoyo en decisiones sin transferir la responsabilidad.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section diagnostico" id="diagnostico">
+  <div class="container">
+    <h2>Diagnóstico Estratégico</h2>
+
+    <p>
+      El diagnóstico es la etapa inicial donde comprendemos profundamente
+      el escenario, los riesgos involucrados y los objetivos reales del proyecto.
+      Es la base que sustenta decisiones responsables y bien fundamentadas.
+    </p>
+
+    <p>
+      Antes de proponer cualquier solución, organizamos el contexto,
+      identificamos puntos críticos y estructuramos la información
+      que realmente importa.
+    </p>
+
+    <a href="../diagnostico.html" class="btn-primary">
+      Iniciar Diagnóstico Estratégico
     </a>
+  </div>
+</section>
+
+<section class="section contato" id="contato">
+  <div class="container contato-box">
+    <h2>¿Su escenario requiere decisión o claridad?</h2>
+
+    <p>
+      Si está enfrentando un proyecto complejo, decisiones sensibles
+      o necesita análisis estructurado, podemos conversar
+      y evaluar juntos los próximos pasos.
+    </p>
+
+    <a href="https://wa.me/5511996232846" class="btn-secondary" target="_blank">
+      Hablar sobre un proyecto
+    </a>
+
+    <a href="../plano.html" class="btn-secondary">
+      Ver planes de creación de sitios
+    </a>
+
+    <p style="margin-top:15px; font-size:13px; opacity:0.7;">
+      Trabajo enfocado en proyectos que involucran riesgo, operaciones y decisiones estratégicas.
+    </p>
   </div>
 </section>
 
 </main>
 
-<!-- FOOTER -->
 <footer class="footer">
   <div class="container footer-inner">
     <p>© 2025 ACS Consult | Ana Claudia Souza</p>
-    <p class="footer-small">Inteligencia de datos aplicada a la decisión</p>
+    <p class="footer-small">Inteligencia de datos aplicada a la toma de decisiones</p>
   </div>
 </footer>
 
-<!-- WHATSAPP FLOAT -->
-<a
-  href="https://wa.me/5511996232846?text=Hola%2C%20vi%20su%20sitio%20web%20y%20me%20gustaría%20hablar%20sobre%20un%20posible%20proyecto."
-  class="whatsapp-float"
-  target="_blank"
-  aria-label="Hablar por WhatsApp"
->
+<a href="https://wa.me/5511996232846" class="whatsapp-float" target="_blank">
   <span class="whatsapp-text">¿Hablamos?</span>
 </a>
 
-<!-- JS -->
 <script src="../script.js"></script>
 
 </body>

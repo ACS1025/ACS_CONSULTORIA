@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Dashboard Operacional | ACS Consult</title>
+  <meta name="description" content="Dashboard operacional logístico para monitoramento de indicadores, produtividade e tomada de decisão em tempo real.">
+
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/x-icon" href="../src/icon/favicon.ico">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="container header-inner">
+    <div class="brand">ACS Consult</div>
+    <nav class="nav">
+      <a href="../index.html">Home</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="section">
+  <div class="container">
+
+    <h1>Dashboard Operacional Logístico</h1>
+
+    <p>
+      Painel gerencial desenvolvido para monitoramento da operação em tempo real,
+      permitindo acompanhamento de indicadores, produtividade e desempenho logístico.
+    </p>
+
+  </div>
+</section>
+
+<!-- CONTEXTO -->
+<section class="section">
+  <div class="container">
+
+    <h2>Contexto do Projeto</h2>
+
+    <p>
+      Operações logísticas exigem visibilidade contínua para garantir eficiência,
+      controle de custos e cumprimento de prazos.
+    </p>
+
+    <p>
+      O desafio consistia em consolidar múltiplas fontes de dados em um painel único,
+      permitindo uma visão clara e rápida da operação.
+    </p>
+
+  </div>
+</section>
+
+<!-- SOLUÇÃO -->
+<section class="section">
+  <div class="container">
+
+    <h2>Solução Desenvolvida</h2>
+
+    <ul>
+      <li>Integração de dados operacionais em base estruturada</li>
+      <li>Criação de indicadores de desempenho logístico</li>
+      <li>Monitoramento de produtividade e volumes operacionais</li>
+      <li>Dashboard interativo para acompanhamento em tempo real</li>
+    </ul>
+
+  </div>
+</section>
+
+<!-- VISUALIZAÇÃO -->
+<section class="section">
+  <div class="container">
+
+    <h2>Visualização</h2>
+
+    <p>Abaixo exemplo da estrutura analítica utilizada:</p>
+
+    <div class="carousel">
+
+      <button class="carousel-btn prev" onclick="mudarSlide(-1)">❮</button>
+
+      <img class="carousel-img active" src="../src/operacional-1.png" alt="Visão geral da operação">
+      <img class="carousel-img" src="../src/operacional-2.png" alt="Indicadores logísticos">
+      <img class="carousel-img" src="../src/operacional-3.png" alt="Volume e produtividade">
+
+      <button class="carousel-btn next" onclick="mudarSlide(1)">❯</button>
+
+    </div>
+
+    <p style="margin-top:15px; font-size:14px; opacity:0.7;">
+      * Dados sensíveis foram anonimizados para preservar a confidencialidade da operação.
+    </p>
+
+  </div>
+</section>
+
+<!-- RESULTADOS -->
+<section class="section">
+  <div class="container">
+
+    <h2>Resultados Gerados</h2>
+
+    <ul>
+      <li>Melhoria na visibilidade da operação em tempo real</li>
+      <li>Apoio à tomada de decisão gerencial</li>
+      <li>Identificação de gargalos operacionais</li>
+      <li>Otimização do acompanhamento de produtividade</li>
+    </ul>
+
+  </div>
+</section>
+
+<!-- TECNOLOGIAS -->
+<section class="section">
+  <div class="container">
+
+    <h2>Tecnologias Utilizadas</h2>
+
+    <p>
+      Google Sheets | Power BI | Integração de Dados | Modelagem de Indicadores | Análise Operacional
+    </p>
+
+  </div>
+</section>
+
+<!-- DIFERENCIAL -->
+<section class="section">
+  <div class="container">
+
+    <h2>Diferencial Analítico</h2>
+
+    <p>
+      O dashboard foi estruturado para fornecer uma visão consolidada da operação,
+      permitindo análise rápida e tomada de decisão baseada em indicadores estratégicos,
+      reduzindo a dependência de relatórios manuais.
+    </p>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section contato">
+  <div class="container">
+
+    <h2>Quer aplicar isso na sua operação?</h2>
+
+    <p>
+      Posso estruturar um modelo semelhante para sua empresa,
+      adaptado ao seu contexto e necessidades.
+    </p>
+
+    <a href="https://wa.me/5511996232846" class="btn-primary" target="_blank">
+      Conversar sobre este projeto
+    </a>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <p>© 2025 ACS Consult | Ana Claudia Souza</p>
+    <p class="footer-small">Inteligência de dados aplicada à decisão</p>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLUTUANTE -->
+<a
+  href="https://wa.me/5511996232846?text=Ol%C3%A1%2C%20vi%20o%20seu%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20poss%C3%ADvel%20projeto."
+  class="whatsapp-float"
+  target="_blank"
+  aria-label="Falar no WhatsApp"
+>
+  <span class="whatsapp-text">Vamos conversar?</span>
+</a>
+
+<!-- SCRIPT CARROSSEL -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  let slideIndex = 0;
+  const slides = document.querySelectorAll(".carousel-img");
+
+  function mostrarSlide(index) {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[index].classList.add("active");
+  }
+
+  function mudarSlide(direcao) {
+    slideIndex += direcao;
+
+    if (slideIndex >= slides.length) slideIndex = 0;
+    if (slideIndex < 0) slideIndex = slides.length - 1;
+
+    mostrarSlide(slideIndex);
+  }
+
+  window.mudarSlide = mudarSlide;
+
+  mostrarSlide(slideIndex);
+
+  setInterval(() => {
+    mudarSlide(1);
+  }, 4000);
+
+});
+</script>
+
+</body>
+</html>

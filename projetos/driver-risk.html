@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Driver Risk Analysis | ACS Consult</title>
+  <meta name="description" content="Análise de risco de motoristas com dashboards e indicadores para redução de ocorrências e melhoria da performance operacional.">
+
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="../src/icon/favicon.ico">
+</head>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  let slideIndex = 0;
+  const slides = document.querySelectorAll(".carousel-img");
+
+  function mostrarSlide(index) {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[index].classList.add("active");
+  }
+
+  function mudarSlide(direcao) {
+    slideIndex += direcao;
+
+    if (slideIndex >= slides.length) slideIndex = 0;
+    if (slideIndex < 0) slideIndex = slides.length - 1;
+
+    mostrarSlide(slideIndex);
+  }
+
+  // deixa função global (IMPORTANTE pro botão funcionar)
+  window.mudarSlide = mudarSlide;
+
+  // inicia
+  mostrarSlide(slideIndex);
+
+  // autoplay
+  setInterval(() => {
+    mudarSlide(1);
+  }, 4000);
+
+});
+</script>
+<body>
+
+<header class="header">
+  <div class="container header-inner">
+    <div class="brand">ACS Consult</div>
+    <nav class="nav">
+      <a href="../index.html">Home</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="section">
+  <div class="container">
+
+    <h1>Análise de Performance e Risco de Motoristas</h1>
+
+<p>
+Sistema analítico desenvolvido para monitorar comportamento de motoristas,
+identificar padrões de risco e apoiar decisões estratégicas em operações logísticas.
+</p>
+
+  </div>
+</section>
+
+<!-- CONTEXTO -->
+<section class="section">
+  <div class="container">
+
+    <h2>Contexto do Projeto</h2>
+
+    <p>
+Em operações logísticas, o desempenho dos motoristas impacta diretamente
+a segurança, os custos e a eficiência da operação.
+</p>
+
+<p>
+O principal desafio era transformar dados operacionais dispersos em uma visão estruturada,
+capaz de identificar padrões de comportamento, reincidência e níveis de risco.
+</p>
+
+  </div>
+</section>
+
+<!-- SOLUÇÃO -->
+<section class="section">
+  <div class="container">
+
+    <h2>Solução Desenvolvida</h2>
+
+    <ul>
+  <li>Modelagem e estruturação de base histórica de ocorrências</li>
+  <li>Criação de indicadores de performance e risco por motorista</li>
+  <li>Classificação por níveis de criticidade e reincidência</li>
+  <li>Dashboard interativo para análise operacional e tomada de decisão</li>
+</ul>
+
+  </div>
+</section>
+
+<!-- DASHBOARD -->
+<section class="section">
+  <div class="container">
+
+    <h2>Visualização</h2>
+
+    <p>Abaixo exemplo da estrutura analítica utilizada:</p>
+
+    <div class="carousel">
+
+  <button class="carousel-btn prev" onclick="mudarSlide(-1)">❮</button>
+
+  <img class="carousel-img active" src="../src/driver-risk-dashboard.png" alt="Visão geral do dashboard">
+  <img class="carousel-img" src="../src/driver-risk-dashboard1.png" alt="Ranking de motoristas">
+  <img class="carousel-img" src="../src/driver-risk-dashboard2.png" alt="Indicadores operacionais">
+
+  <button class="carousel-btn next" onclick="mudarSlide(1)">❯</button>
+
+</div>
+<p style="margin-top:15px; font-size:14px; opacity:0.7;">
+* Dados sensíveis foram anonimizados para preservar a confidencialidade da operação.
+</p>
+
+  </div>
+  
+</section>
+
+
+
+<!-- RESULTADOS -->
+<section class="section">
+  <div class="container">
+
+    <h2>Resultados Gerados</h2>
+
+    <ul>
+  <li>Identificação de padrões de reincidência entre motoristas</li>
+  <li>Priorização de ações preventivas com base em dados</li>
+  <li>Redução de decisões reativas na operação</li>
+  <li>Aumento da visibilidade sobre riscos operacionais</li>
+</ul>
+
+  </div>
+</section>
+
+<!-- TECNOLOGIAS -->
+<section class="section">
+  <div class="container">
+
+    <h2>Tecnologias Utilizadas</h2>
+
+    <p>
+Google Sheets | Power BI | Modelagem de Dados | Análise de Indicadores | JavaScript (para interatividade) | vsCode (IDE) | Metodologia Ágil para desenvolvimento iterativo
+</p>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <h2>Diferencial Analítico</h2>
+
+    <p>
+      O projeto foi estruturado não apenas para visualização de dados,
+      mas para permitir uma análise contínua de risco e performance,
+      possibilitando atuação preventiva e tomada de decisão baseada em dados.
+    </p>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section contato">
+  <div class="container">
+
+    <h2>Quer aplicar isso na sua operação?</h2>
+
+    <p>
+      Posso estruturar um modelo semelhante para sua empresa,
+      adaptado ao seu contexto e necessidades.
+    </p>
+
+    <a href="https://wa.me/5511996232846" class="btn-primary" target="_blank">
+      Conversar sobre este projeto
+    </a>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <p>© 2025 ACS Consult | Ana Claudia Souza</p>
+    <p class="footer-small">Inteligência de dados aplicada à decisão</p>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLUTUANTE -->
+<a
+  href="https://wa.me/5511996232846?text=Ol%C3%A1%2C%20vi%20o%20seu%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20poss%C3%ADvel%20projeto."
+  class="whatsapp-float"
+  target="_blank"
+  aria-label="Falar no WhatsApp"
+>
+  <span class="whatsapp-text">Vamos conversar?</span>
+</a>
+
+</body>
+</html>
